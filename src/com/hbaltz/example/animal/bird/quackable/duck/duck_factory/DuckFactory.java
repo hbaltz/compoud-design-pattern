@@ -1,10 +1,10 @@
-package com.hbaltz.example.animal.bird.duck.duck_factory;
+package com.hbaltz.example.animal.bird.quackable.duck.duck_factory;
 
-import com.hbaltz.example.animal.bird.IQuackable;
-import com.hbaltz.example.animal.bird.duck.DuckCall;
-import com.hbaltz.example.animal.bird.duck.MallardDuck;
-import com.hbaltz.example.animal.bird.duck.RedheadDuck;
-import com.hbaltz.example.animal.bird.duck.RubberDuck;
+import com.hbaltz.example.animal.bird.quackable.IQuackable;
+import com.hbaltz.example.animal.bird.quackable.duck.DuckCall;
+import com.hbaltz.example.animal.bird.quackable.duck.MallardDuck;
+import com.hbaltz.example.animal.bird.quackable.duck.RedheadDuck;
+import com.hbaltz.example.animal.bird.quackable.duck.RubberDuck;
 
 
 /**

@@ -1,6 +1,6 @@
-package com.hbaltz.example.animal.bird.duck.quack_counter;
+package com.hbaltz.example.animal.bird.quackable.duck.quack_counter;
 
-import com.hbaltz.example.animal.bird.IQuackable;
+import com.hbaltz.example.animal.bird.quackable.IQuackable;
 
 /**
  * Decorates IQuackable objects to count how many times these objects have quacked in total

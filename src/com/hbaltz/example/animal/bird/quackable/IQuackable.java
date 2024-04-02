@@ -1,4 +1,4 @@
-package com.hbaltz.example.animal.bird;
+package com.hbaltz.example.animal.bird.quackable;
 
 /**
  * Modeled a thing that can quack

@@ -1,6 +1,6 @@
-package com.hbaltz.example.animal.bird.duck.flock;
+package com.hbaltz.example.animal.bird.quackable.duck.flock;
 
-import com.hbaltz.example.animal.bird.IQuackable;
+import com.hbaltz.example.animal.bird.quackable.IQuackable;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
-package com.hbaltz.example.animal.bird.duck;
+package com.hbaltz.example.animal.bird.quackable.duck;
 
-import com.hbaltz.example.animal.bird.IQuackable;
+import com.hbaltz.example.animal.bird.quackable.IQuackable;
 import com.hbaltz.example.animal.bird.goose.Goose;
 
 /**

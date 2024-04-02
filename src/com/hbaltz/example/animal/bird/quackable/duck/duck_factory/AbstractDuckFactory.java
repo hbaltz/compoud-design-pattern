@@ -1,6 +1,6 @@
-package com.hbaltz.example.animal.bird.duck.duck_factory;
+package com.hbaltz.example.animal.bird.quackable.duck.duck_factory;
 
-import com.hbaltz.example.animal.bird.IQuackable;
+import com.hbaltz.example.animal.bird.quackable.IQuackable;
 
 /**
  * Abstract factory, each method create one type of ducks,

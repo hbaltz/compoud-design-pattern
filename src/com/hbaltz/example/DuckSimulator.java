@@ -1,11 +1,11 @@
 package com.hbaltz.example;
 
-import com.hbaltz.example.animal.bird.IQuackable;
-import com.hbaltz.example.animal.bird.duck.*;
-import com.hbaltz.example.animal.bird.duck.duck_factory.AbstractDuckFactory;
-import com.hbaltz.example.animal.bird.duck.duck_factory.CountingDuckFactory;
-import com.hbaltz.example.animal.bird.duck.flock.Flock;
-import com.hbaltz.example.animal.bird.duck.quack_counter.QuackCounter;
+import com.hbaltz.example.animal.bird.quackable.IQuackable;
+import com.hbaltz.example.animal.bird.quackable.duck.*;
+import com.hbaltz.example.animal.bird.quackable.duck.duck_factory.AbstractDuckFactory;
+import com.hbaltz.example.animal.bird.quackable.duck.duck_factory.CountingDuckFactory;
+import com.hbaltz.example.animal.bird.quackable.duck.flock.Flock;
+import com.hbaltz.example.animal.bird.quackable.duck.quack_counter.QuackCounter;
 import com.hbaltz.example.animal.bird.goose.Goose;
 
 public class DuckSimulator {
