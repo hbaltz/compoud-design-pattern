@@ -1,4 +1,4 @@
-package com.hbaltz.example.animal.bird.quackable.duck.quack_counter;
+package com.hbaltz.example.animal.bird.quackable.quack_counter;
 
 import com.hbaltz.example.animal.bird.quackable.IQuackable;
 

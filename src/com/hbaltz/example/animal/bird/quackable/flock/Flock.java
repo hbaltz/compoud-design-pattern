@@ -1,4 +1,4 @@
-package com.hbaltz.example.animal.bird.quackable.duck.flock;
+package com.hbaltz.example.animal.bird.quackable.flock;
 
 import com.hbaltz.example.animal.bird.quackable.IQuackable;
 
