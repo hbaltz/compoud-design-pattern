@@ -1,10 +1,8 @@
 package com.hbaltz.example;
 
 import com.hbaltz.example.animal.bird.IQuackable;
-import com.hbaltz.example.animal.bird.duck.DuckCall;
-import com.hbaltz.example.animal.bird.duck.MallardDuck;
-import com.hbaltz.example.animal.bird.duck.RedheadDuck;
-import com.hbaltz.example.animal.bird.duck.RubberDuck;
+import com.hbaltz.example.animal.bird.duck.*;
+import com.hbaltz.example.animal.bird.goose.Goose;
 
 public class DuckSimulator {
     public static void main(String[] args) {
@@ -17,6 +15,7 @@ public class DuckSimulator {
         IQuackable redheadDuck = new RedheadDuck();
         IQuackable duckCall = new DuckCall();
         IQuackable rubberDuck = new RubberDuck();
+        IQuackable gooseDuck = new GooseDuckAdapter(new Goose());
 
         System.out.println("\nDuck Simulator:");
 
@@ -24,6 +23,7 @@ public class DuckSimulator {
         simulate(redheadDuck);
         simulate(duckCall);
         simulate(rubberDuck);
+        simulate(gooseDuck);
     }
 
     private void simulate(IQuackable duck) {
