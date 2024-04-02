@@ -5,7 +5,7 @@ import com.hbaltz.example.animal.bird.quackable.duck.DuckCall;
 import com.hbaltz.example.animal.bird.quackable.duck.MallardDuck;
 import com.hbaltz.example.animal.bird.quackable.duck.RedheadDuck;
 import com.hbaltz.example.animal.bird.quackable.duck.RubberDuck;
-import com.hbaltz.example.animal.bird.quackable.duck.quack_counter.QuackCounter;
+import com.hbaltz.example.animal.bird.quackable.quack_counter.QuackCounter;
 
 /**
  * Create duck with the QuackCounter decorator, so the ducks' quack are counted

@@ -4,9 +4,10 @@ import com.hbaltz.example.animal.bird.quackable.IQuackable;
 import com.hbaltz.example.animal.bird.quackable.duck.*;
 import com.hbaltz.example.animal.bird.quackable.duck.duck_factory.AbstractDuckFactory;
 import com.hbaltz.example.animal.bird.quackable.duck.duck_factory.CountingDuckFactory;
-import com.hbaltz.example.animal.bird.quackable.duck.flock.Flock;
-import com.hbaltz.example.animal.bird.quackable.duck.quack_counter.QuackCounter;
+import com.hbaltz.example.animal.bird.quackable.flock.Flock;
+import com.hbaltz.example.animal.bird.quackable.quack_counter.QuackCounter;
 import com.hbaltz.example.animal.bird.goose.Goose;
+import com.hbaltz.example.animal.bird.quackable.quackologist.Quackologist;
 
 public class DuckSimulator {
     public static void main(String[] args) {
@@ -47,6 +48,10 @@ public class DuckSimulator {
 
         // We add this flock to the larger flock
         flockOfDucks.add(flockOfMallards);
+
+        // we add a quackologist that observe when a specific duck quacks
+        Quackologist quackologist = new Quackologist();
+        flockOfDucks.registerQuackObserver(quackologist);
 
         System.out.println("\nDuck Simulator:");
 
