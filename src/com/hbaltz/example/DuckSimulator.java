@@ -2,6 +2,7 @@ package com.hbaltz.example;
 
 import com.hbaltz.example.animal.bird.IQuackable;
 import com.hbaltz.example.animal.bird.duck.*;
+import com.hbaltz.example.animal.bird.duck.quack_counter.QuackCounter;
 import com.hbaltz.example.animal.bird.goose.Goose;
 
 public class DuckSimulator {
@@ -11,11 +12,13 @@ public class DuckSimulator {
     }
 
     private void launchSimulation() {
-        IQuackable mallardDuck = new MallardDuck();
-        IQuackable redheadDuck = new RedheadDuck();
-        IQuackable duckCall = new DuckCall();
-        IQuackable rubberDuck = new RubberDuck();
-        IQuackable gooseDuck = new GooseDuckAdapter(new Goose());
+        // Quack counter is a decorator that counts the number of quacks of the decorated ducks
+        IQuackable mallardDuck = new QuackCounter(new MallardDuck());
+        IQuackable redheadDuck = new QuackCounter(new RedheadDuck());
+        IQuackable duckCall    = new QuackCounter(new DuckCall());
+        IQuackable rubberDuck  = new QuackCounter(new RubberDuck());
+        // We are not interested in the honk of the goose so we don't decorated the goose duck adapter
+        IQuackable gooseDuck   = new GooseDuckAdapter(new Goose());
 
         System.out.println("\nDuck Simulator:");
 
@@ -24,6 +27,8 @@ public class DuckSimulator {
         simulate(duckCall);
         simulate(rubberDuck);
         simulate(gooseDuck);
+
+        System.out.println("The ducks quacked " + QuackCounter.getNumberOfQuacks() + " times.");
     }
 
     private void simulate(IQuackable duck) {
