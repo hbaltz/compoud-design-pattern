@@ -4,6 +4,7 @@ import com.hbaltz.example.animal.bird.IQuackable;
 import com.hbaltz.example.animal.bird.duck.*;
 import com.hbaltz.example.animal.bird.duck.duck_factory.AbstractDuckFactory;
 import com.hbaltz.example.animal.bird.duck.duck_factory.CountingDuckFactory;
+import com.hbaltz.example.animal.bird.duck.flock.Flock;
 import com.hbaltz.example.animal.bird.duck.quack_counter.QuackCounter;
 import com.hbaltz.example.animal.bird.goose.Goose;
 
@@ -16,6 +17,8 @@ public class DuckSimulator {
     }
 
     private void launchSimulation(AbstractDuckFactory duckFactory) {
+        // We create a flock of diverse ducks (not sure if it really exists in the nature)
+        Flock flockOfDucks = new Flock();
         IQuackable mallardDuck = duckFactory.createMallardDuck();
         IQuackable redheadDuck = duckFactory.createRedheadDuck();
         IQuackable duckCall    = duckFactory.createDuckCall();
@@ -23,13 +26,31 @@ public class DuckSimulator {
 
         IQuackable gooseDuck   = new GooseDuckAdapter(new Goose());
 
+
+        flockOfDucks.add(mallardDuck);
+        flockOfDucks.add(redheadDuck);
+        flockOfDucks.add(duckCall);
+        flockOfDucks.add(rubberDuck);
+        flockOfDucks.add(gooseDuck);
+
+        // create a flock of mallard duck only that are a part of the larger flock of ducks
+        Flock flockOfMallards = new Flock();
+        IQuackable mallardOne = duckFactory.createMallardDuck();
+        IQuackable mallardTwo = duckFactory.createMallardDuck();
+        IQuackable mallardThree = duckFactory.createMallardDuck();
+        IQuackable mallardFour = duckFactory.createMallardDuck();
+
+        flockOfMallards.add(mallardOne);
+        flockOfMallards.add(mallardTwo);
+        flockOfMallards.add(mallardThree);
+        flockOfMallards.add(mallardFour);
+
+        // We add this flock to the larger flock
+        flockOfDucks.add(flockOfMallards);
+
         System.out.println("\nDuck Simulator:");
 
-        simulate(mallardDuck);
-        simulate(redheadDuck);
-        simulate(duckCall);
-        simulate(rubberDuck);
-        simulate(gooseDuck);
+        simulate(flockOfDucks);
 
         System.out.println("The ducks quacked " + QuackCounter.getNumberOfQuacks() + " times.");
     }
